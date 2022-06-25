@@ -52,3 +52,16 @@ model	speed	hd
 1232	450	8.0
 1232	450	10.0
 1260	500	10.0
+
+6)Для каждого производителя, выпускающего ПК-блокноты c объёмом жесткого диска не менее 10 Гбайт, найти скорости таких ПК-блокнотов. 
+Вывод: производитель, скорость.
+
+select distinct Product.maker, Laptop.speed from Product, Laptop
+where Laptop.hd >= 10 and Product.type = 'Laptop' and Product.model = Laptop.model
+
+Результат выполнения
+maker	speed
+A	450
+A	600
+A	750
+B	750
