@@ -94,3 +94,16 @@ where type = 'PC' and not maker in
 Результат выполнения
 maker
 E
+
+9)Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+
+Select distinct product.maker from product 
+join pc on product.model = pc.model
+where pc.speed >= 450 and product.type = 'pc'
+
+Результат выполнения
+maker
+A
+B
+E
+
