@@ -84,3 +84,13 @@ where maker = 'B'
 model	price
 1121	850.0000
 1750	1200.0000
+
+8) Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+
+select distinct maker from product
+where type = 'PC' and not maker in 
+(select maker from product where type = 'laptop')
+
+Результат выполнения
+maker
+E
