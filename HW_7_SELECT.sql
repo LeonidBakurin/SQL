@@ -70,11 +70,30 @@ where created_on = '2021-07-12 00:00:00' and name like '%Andrey%';
 
 select name from students
 where created_on = '2021-07-12 00:00:00' and name like '%8%';
+
 --17. ¬ывести пользовател€ у которых id равен 110
+
+select name from students
+where id = 110;
+
 --18. ¬ывести пользовател€ у которых id равен 153
+
+select name from students
+where id = 153;
+
 --19. ¬ывести пользовател€ у которых id больше 140
+
+select name from students 
+where id > 140;
+
 --20. ¬ывести пользовател€ у которых id меньше 130
+
+select name from students
+where id < 130;
+
 --21. ¬ывести пользовател€ у которых id меньше 127 или больше 188
+
+
 --22. ¬ывести пользовател€ у которых id меньше либо равно 137
 --23. ¬ывести пользовател€ у которых id больше либо равно 137
 --24. ¬ывести пользовател€ у которых id больше 180 но меньше 190
