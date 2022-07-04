@@ -53,6 +53,9 @@ where id in (3, 6 , 9 );
 alter table roles 
 rename column parking to taxi;
 
+alter table roles
+drop column taxi;
+
 insert into roles_salary(id_roles, id_salary)
 values  (1, 1),
 		(2, 4),
