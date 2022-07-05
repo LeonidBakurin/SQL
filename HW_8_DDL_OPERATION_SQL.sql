@@ -221,4 +221,65 @@ values ('Junior Python developer'),
 	   ('Middle Automation QA engineer'),
 	   ('Senior Automation QA engineer');
 
-select * from roles;
+--10)Создать таблицу roles_employee
+-- id. Serial  primary key,
+-- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
+-- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+
+create table roles_employee(
+	id serial primary key,
+	employee_id int not null,
+	role_id int not null,
+		foreign key (employee_id)
+			references employees(id),
+		foreign key (role_id)
+			references roles(id) 
+);
+  
+select * from roles_employee;
+
+--11)Наполнить таблицу roles_employee 40 строками
+
+insert into roles_employee(employee_id, role_id)
+values  (1,1),
+		(2,2),
+		(3,3),
+		(4,4),
+		(5,5),
+		(6,6),
+		(7,7),
+		(8,8),
+		(9,9),
+		(10,10),
+		(11,11),
+		(12,12),
+		(13,13),
+		(14,14),
+		(15,15),
+		(16,16),
+		(17,1),
+		(18,2),
+		(19,3),
+		(20,4),
+		(21,5),
+		(22,6),
+		(23,7),
+		(24,8),
+		(25,9),
+		(26,10),
+		(27,11),
+		(28,12),
+		(29,13),
+		(30,14),
+		(31,15),
+		(32,16),
+		(33,1),
+		(34,2),
+		(35,3),
+		(36,4),
+		(37,5),
+		(38,6),
+		(39,7),
+		(40,14);
+
+select * from roles_employee;	
