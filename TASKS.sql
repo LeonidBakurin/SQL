@@ -106,4 +106,12 @@ maker
 A
 B
 E
+10)Найдите модели принтеров, имеющих самую высокую цену. Вывести: model, price
 
+select model, price from printer
+where price = (select max(price) from printer)
+
+Результат выполнения
+model	price
+1288	400.0000
+1276	400.0000
